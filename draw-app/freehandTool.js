@@ -32,7 +32,7 @@ function FreehandTool(){
 		//try and comment out these lines and see what happens!
 		else{
 			previousMouseX = -1;
-			previousMouseY = -1;
+			previousMouseY = -2;
 		}
 	};
 }
