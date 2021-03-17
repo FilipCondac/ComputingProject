@@ -8,7 +8,8 @@ function LineToTool(){
 	var startMouseX = -1;
 	var startMouseY = -1;
 	var drawing = false;
-
+	stroke(0);
+	fill(0);
 	//draws the line to the screen 
 	this.draw = function(){
 
@@ -42,6 +43,15 @@ function LineToTool(){
 			startMouseY = -1;
 		}
 	};
-
+	this.populateOptions = function() {
+		select(".options").html(
+			'<input type="range" min="1" max="50" value="2" class="slider" id="myRange">'
+			);
+		//click handler
+		select("#myRange").mouseClicked(function() {
+			//ellipse(mouseX, mouseY, myRange.value, myRange.value);
+            strokeWeight(myRange.value);
+            });
+	};
 
 }

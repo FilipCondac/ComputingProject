@@ -4,6 +4,8 @@ var toolbox = null;
 var colourP = null;
 var helpers = null;
 
+var input;
+var img;
 
 function setup() {
 
@@ -13,7 +15,7 @@ function setup() {
 	c.parent("content");
 
 	//create helper functions and the colour palette
-    helpers = new HelperFunctions();
+	helpers = new HelperFunctions();
 	colourP = new ColourPalette();
 
 	//create a toolbox for storing the tools
@@ -24,7 +26,17 @@ function setup() {
 	toolbox.addTool(new LineToTool());
 	toolbox.addTool(new SprayCanTool());
 	toolbox.addTool(new MirrorDrawTool());
+	toolbox.addTool(new EditableShape());
+	toolbox.addTool(new ImportPicture());
+	toolbox.addTool(new EraserTool());
+
+
+	input = createFileInput(handleFile);
+	input.position(326, 7);
+
+
 	background(255);
+
 
 }
 
@@ -37,5 +49,24 @@ function draw() {
 		toolbox.selectedTool.draw();
 	} else {
 		alert("it doesn't look like your tool has a draw method!");
+	}
+
+
+	if (img) {
+		image(img, 0, 0, width, height);
+	}
+
+	
+
+}
+
+function handleFile(file) {
+
+	if (file.type === 'image') {
+		img = createImg(file.data, '');
+		img.hide();
+
+	} else {
+		img = null;
 	}
 }
