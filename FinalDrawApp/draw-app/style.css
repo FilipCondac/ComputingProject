@@ -1,0 +1,117 @@
+html,
+body {
+	margin: 0px;
+	height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+
+}
+
+#content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+	position: absolute;
+	width: 100%;
+}
+
+.footer {
+	grid-area: footer;
+}
+
+.sideBarItem {
+	max-height: 50px;
+	max-width: 50px;
+	margin-left: 2px;
+
+	padding: 5px;
+}
+
+.sideBarItem img {
+	max-height: 150px;
+	max-Width: 50px;
+}
+
+.colourPalette {
+	grid-area: colourP;
+	display: flex;
+	flex-direction: grid;
+	flex-flow: wrap;
+}
+
+.options {
+	grid-area: options;
+	padding: 15px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	margin-bottom: 2px;
+	color: black;
+	-webkit-text-stroke-width: 1px;
+	font-family: 'Freckle Face', cursive;
+	font-size: 1.2rem;
+
+}
+
+.colourSwatches {
+	box-sizing: border-box;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+	max-height: 40px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+
+.wrapper {
+	display: grid;
+	height: 100%;
+	grid-template-columns: 70px 230px minmax(500px, 1fr);
+	grid-template-rows: 35px minmax(500px, 1fr) 160px;
+	grid-template-areas:
+		"header header header"
+		"sidebar content content"
+		"colourP colourP options";
+	background-color: #fff;
+	color: #444;
+
+}
+
+.box {
+	background-color: rgb(156, 156, 156);
+	color: #fff;
+	font-size: 150%;
+	overflow: hidden;
+
+}
+
+
+
+.header {
+	background-color: rgb(187, 255, 0);
+	outline-color: black;
+	outline-width: 2px;
+	outline-style: solid;
+	text-align: center;
+	font-family: 'Freckle Face', cursive;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+
+}
+
+.helperButton {
+	margin-left: 1rem;
+	margin-top: 6px;
+	margin-bottom: 10px;
+	width: 8rem;
+	float: left;
+	background-color: white;
+	-webkit-text-stroke-width: 0.5px;
+	font-family: 'Freckle Face', cursive;
+	font-size: 1rem;
+}

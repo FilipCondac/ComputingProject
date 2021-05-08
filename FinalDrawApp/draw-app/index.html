@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="lib/p5.min.js"></script>
+
+  <script src="sketch.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
+
+  <!-- add extra scripts below -->
+  <script src="toolbox.js"></script>
+  <script src="colourPalette.js"></script>
+  <script src="helperFunctions.js"></script>
+
+  <!-- Call our files -->
+  <script src="freehandTool.js"></script>
+  <script src="lineToTool.js"></script>
+  <script src="sprayCanTool.js"></script>
+  <script src="mirrorDrawTool.js"></script>
+  <script src="editableShape.js"></script>
+  <script src="eraserTool.js"></script>
+  <script src="textInput.js"></script>
+  <script src="ellipseTool.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="box header">Pro Paint
+
+      <button id="clearButton" class="helperButton">Clear</button>
+      <button id="saveImageButton" class="helperButton">Save Image</button>
+
+    </div>
+    <div class="box" id="sidebar"></div>
+    <div id="content"></div>
+    <div class="box colourPalette"></div>
+    <div class="box options">
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
